@@ -11,7 +11,9 @@ import AdminPostRouter from "./route/admin/post.mjs";
 const app = express();
 app.use(express.json());
 app.use(cors());
-
+app.use(cors({
+  origin: 'https://rafaymemon01.github.io/SaleSphere-admin/Admin-Dashboard/'
+}));
 app.use("/user/api/v1", UserPostRouter);
 
 
