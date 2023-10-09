@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(cors({
-  origin: 'https://rafaymemon01.github.io/SaleSphere-admin/Admin-Dashboard/'
+  origin: 'https://rafaymemon01.github.io/SaleSphere-admin/Admin-Dashboard/index.html'
 }));
 app.use("/user/api/v1", UserPostRouter);
 
