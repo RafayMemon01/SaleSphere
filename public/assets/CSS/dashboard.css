@@ -1,0 +1,151 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('./assets/bg.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: whitesmoke;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    color: #EFFFFB;
+}
+header span{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    
+}
+/* .Cardcontainer{
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: nowrap; */
+    /* flex-direction: row; */
+
+/* .productCard{
+    max-width: 200px ;
+} */ 
+.headContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border: 1px solid #EFFFFB;
+    animation: borderAnimation 2s infinite; /* Adjust the duration as needed */
+    margin-bottom: 1em;
+
+}
+.search{
+    display: flex;
+    padding-top: 1em;
+}
+.search input{
+    background-color: transparent;
+    border: none;
+    color: #50D890;
+    padding: .5rem;
+}
+.search input::placeholder{
+    color: #50D890;
+}
+.search button{
+    background-color: transparent;
+    border: none;
+    color: #50D890;
+}
+main div.right{
+ display: flex;
+ justify-content: end;   
+ /* border: 1px solid #EFFFFB; */
+ padding: 1em;
+}
+.navBtn{
+    border: none;
+    border-radius: 1em;
+    padding: .5em;
+    margin-left: 2em;
+    background-color: #50D890;
+    color: #EFFFFB;
+}
+.navBtn:hover{
+    border: 1px solid #50D890;
+    background-color: transparent;
+    
+}
+.linkBtn:hover{
+    border: 1px solid #50D890 !important;
+    background-color: transparent !important;
+    color: #50D890 !important;
+    
+}
+.bord{
+    box-shadow: rgba(80, 216, 144, 0.3) 0px 19px 38px, rgba(80, 216, 144, 0.22) 0px 15px 12px;
+    animation: borderAnimation 2s infinite;
+    border: 1px solid #50D890;
+    border-radius: .2em;
+    max-height: 20% !important;
+
+}
+main{
+    margin-bottom: 2em;
+}
+.linkBtn{
+    border: none;
+    border-radius: 1em;
+    padding: .5em;
+    margin-left: 2em;
+    background-color: #50D890 !important;
+    color: #EFFFFB !important;
+}
+.cardFoot i{
+    font-size: larger;
+    cursor: pointer;
+    color: #50D890;
+}
+.timediv{
+    font-size: 1.8rem;
+    color: #50D890;
+}
+@keyframes borderAnimation {
+    0% {
+        border-color: #EFFFFB;
+    }
+    50% {
+        border-color: #50D890;
+    }
+    100% {
+        border-color: #EFFFFB;
+    }
+}
+@media (max-width: 597px) {
+    .navBtn{
+        border: none;
+        font-size: smaller;
+        margin-left: .5em;
+    }
+    .timediv{
+        font-size: large;
+    }
+  }
+@media (max-width: 505px) {
+    .navBtn{
+        border: none;
+        font-size: x-small;
+        margin-left: .5em;
+    }
+    header h2{
+        font-size: large;
+    }
+    .headContainer{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+  }
+@media (max-width: 505px) {
+    header span{
+        font-size: x-small;
+
+    }
+    .timediv{
+        font-size: small;
+    }
+  }

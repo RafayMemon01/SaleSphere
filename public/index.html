@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <style></style> -->
+    <link rel="stylesheet" href="./assets/CSS/dashboard.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <span>SaleSphere</span>
+      <h2>Admin Dashboard</h2>
+      <div class="timediv"></div>
+    </header>
+    <main>
+      <div class="headContainer">
+        <div class="left">
+          <form class="search" onsubmit="search(event)">
+            <input type="search" placeholder="Search Here..." />
+            <button type="submit" class="bi bi-search"></button>
+          </form>
+        </div>
+        <div class="right">
+          <button
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            class="navBtn"
+            onclick="cardCreateWindow(event)"
+          >
+            ADD PRODUCT
+          </button>
+          <button class="navBtn">Go to Website</button>
+        </div>
+        <!-- Modal -->
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content modal-dark">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Product</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="productName" class="form-label"
+                    >Product Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="productName"
+                    placeholder="Enter product name"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="productDescription" class="form-label"
+                    >Product Description</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="productDescription"
+                    rows="3"
+                    placeholder="Enter product description"
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="affiliateLink" class="form-label"
+                    >Amazon Affiliate Link</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="affiliateLink"
+                    placeholder="Enter affiliate link"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="productImage" class="form-label"
+                    >Product Image URL</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="productImage"
+                    placeholder="Enter image URL"
+                  />
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- product cards -->
+      <div class="container mt-4">
+        <h2 style="color: #effffb">Products:</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col bord">
+            <div
+              class="card border border-2 border-light"
+              style="background-color: #effffb"
+            >
+              <img
+                src="https://th.bing.com/th/id/R.bbc7c6fe955fe85450c378726559e528?rik=tAY2RWztfbXZew&riu=http%3a%2f%2f3.bp.blogspot.com%2f-zIFV6OzHNtk%2fT9mzY23H6KI%2fAAAAAAAAAU8%2fQjHFYrEytUw%2fs1600%2fbeauty%2bmakeup%2bproducts%2b02.png&ehk=IfYi3GxfcisFdGhgEq%2bIzghOvuO7rIIP3RCD41gC%2brA%3d&risl=&pid=ImgRaw&r=0"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body text-dark">
+                <h5 class="card-title">Card Title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <!-- <a href="#" class="btn linkBtn">Go somewhere</a> -->
+                <div class="cardFoot">
+                  <i class="bi bi-pencil-square"></i>
+                  <i class="bi bi-trash"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="./assets/JS/dashboard.js"></script>
+  </body>
+</html>

@@ -5,19 +5,21 @@ import "dotenv/config";
 const __dirname = path.resolve();
 
 
+import adminAuth from "./route/admin/auth.mjs"
 import UserPostRouter from "./route/user/post.mjs";
 import AdminPostRouter from "./route/admin/post.mjs";
 
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use(cors({
-  origin: 'https://rafaymemon01.github.io/SaleSphere-admin/Admin-Dashboard/index.html'
-}));
+
 app.use("/user/api/v1", UserPostRouter);
 
 
-app.use("/admin/api/v1", AdminPostRouter); //make sure this api was secure
+
+
+
+app.use("/admin/api/v1", adminAuth); //make sure this api was secure
 
 // app.use(express.static(path.join(__dirname, "web/build")));
 
